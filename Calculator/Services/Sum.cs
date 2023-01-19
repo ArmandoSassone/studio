@@ -1,9 +1,9 @@
-﻿using Calculator.ConsoleApp.Models;
+﻿using Calculator.Helpers;
 using Calculator.Models;
-using System.Buffers;
+using Calculator.Repositories;
 using System.ComponentModel.DataAnnotations;
 
-namespace Calculator.ConsoleApp.Services
+namespace Calculator.Services
 {
     /// <summary>
     /// Sum
@@ -11,7 +11,11 @@ namespace Calculator.ConsoleApp.Services
     public class Sum : IOperation
     {
         public string OperationType => "Sum";
-
+        private IOperationRepository repository;
+        public Sum(IOperationRepository repository)
+        {
+            this.repository = repository; //devo passarmi il repo dal costruttore in modo che sia lo stesso per tutte le operation che creo
+        }
         public double ExecuteOperation(Operands operands)
         {           
             var error = Validate(operands);
@@ -20,8 +24,10 @@ namespace Calculator.ConsoleApp.Services
             {
                 throw new Exception(error.FirstOrDefault()?.ErrorMessage);
             }
-
-            return operands.A + operands.B;
+            var result = operands.A + operands.B;
+            var operation = OperationHelper.CreateOperation(operands, this, result);
+            repository.Save(operation);
+            return result;
         }
 
         public IEnumerable<ValidationResult> Validate(Operands operands)

@@ -1,4 +1,4 @@
-﻿namespace Calculator.ConsoleApp.Models
+﻿namespace Calculator.Models
 {
     /// <summary>
     /// User's inputs

@@ -1,8 +1,7 @@
-﻿using Calculator.ConsoleApp.Models;
-using Calculator.ConsoleApp.Services;
-using Calculator.Models;
+﻿using Calculator.Models;
+using Calculator.Services;
 
-namespace Calculator.ConsoleApp.Helpers
+namespace Calculator.Helpers
 {
     /// <summary>
     /// Operation helper 

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ArmandoSassone\\Desktop\\Training\\Back\\Calcolatrice\\Calcolatrice\\Calculator.ConsoleApp.csproj": {}
+    "C:\\Users\\ArmandoSassone\\Desktop\\Training\\git\\studio\\Calcolatrice\\Calculator.ConsoleApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ArmandoSassone\\Desktop\\Training\\Back\\Calcolatrice\\Calcolatrice\\Calculator.ConsoleApp.csproj": {
+    "C:\\Users\\ArmandoSassone\\Desktop\\Training\\git\\studio\\Calcolatrice\\Calculator.ConsoleApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ArmandoSassone\\Desktop\\Training\\Back\\Calcolatrice\\Calcolatrice\\Calculator.ConsoleApp.csproj",
+        "projectUniqueName": "C:\\Users\\ArmandoSassone\\Desktop\\Training\\git\\studio\\Calcolatrice\\Calculator.ConsoleApp.csproj",
         "projectName": "Calculator.ConsoleApp",
-        "projectPath": "C:\\Users\\ArmandoSassone\\Desktop\\Training\\Back\\Calcolatrice\\Calcolatrice\\Calculator.ConsoleApp.csproj",
+        "projectPath": "C:\\Users\\ArmandoSassone\\Desktop\\Training\\git\\studio\\Calcolatrice\\Calculator.ConsoleApp.csproj",
         "packagesPath": "C:\\Users\\ArmandoSassone\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ArmandoSassone\\Desktop\\Training\\Back\\Calcolatrice\\Calcolatrice\\obj\\",
+        "outputPath": "C:\\Users\\ArmandoSassone\\Desktop\\Training\\git\\studio\\Calcolatrice\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -36,11 +36,11 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\ArmandoSassone\\Desktop\\Training\\Back\\Calcolatrice\\Calculator.Repository\\Calculator.MOCK.csproj": {
-                "projectPath": "C:\\Users\\ArmandoSassone\\Desktop\\Training\\Back\\Calcolatrice\\Calculator.Repository\\Calculator.MOCK.csproj"
+              "C:\\Users\\ArmandoSassone\\Desktop\\Training\\git\\studio\\Calculator.Repository\\Calculator.MOCK.csproj": {
+                "projectPath": "C:\\Users\\ArmandoSassone\\Desktop\\Training\\git\\studio\\Calculator.Repository\\Calculator.MOCK.csproj"
               },
-              "C:\\Users\\ArmandoSassone\\Desktop\\Training\\Back\\Calcolatrice\\Calculator\\Calculator.csproj": {
-                "projectPath": "C:\\Users\\ArmandoSassone\\Desktop\\Training\\Back\\Calcolatrice\\Calculator\\Calculator.csproj"
+              "C:\\Users\\ArmandoSassone\\Desktop\\Training\\git\\studio\\Calculator\\Calculator.csproj": {
+                "projectPath": "C:\\Users\\ArmandoSassone\\Desktop\\Training\\git\\studio\\Calculator\\Calculator.csproj"
               }
             }
           }
@@ -74,14 +74,14 @@
         }
       }
     },
-    "C:\\Users\\ArmandoSassone\\Desktop\\Training\\Back\\Calcolatrice\\Calculator.Repository\\Calculator.MOCK.csproj": {
+    "C:\\Users\\ArmandoSassone\\Desktop\\Training\\git\\studio\\Calculator.Repository\\Calculator.MOCK.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ArmandoSassone\\Desktop\\Training\\Back\\Calcolatrice\\Calculator.Repository\\Calculator.MOCK.csproj",
+        "projectUniqueName": "C:\\Users\\ArmandoSassone\\Desktop\\Training\\git\\studio\\Calculator.Repository\\Calculator.MOCK.csproj",
         "projectName": "Calculator.MOCK",
-        "projectPath": "C:\\Users\\ArmandoSassone\\Desktop\\Training\\Back\\Calcolatrice\\Calculator.Repository\\Calculator.MOCK.csproj",
+        "projectPath": "C:\\Users\\ArmandoSassone\\Desktop\\Training\\git\\studio\\Calculator.Repository\\Calculator.MOCK.csproj",
         "packagesPath": "C:\\Users\\ArmandoSassone\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ArmandoSassone\\Desktop\\Training\\Back\\Calcolatrice\\Calculator.Repository\\obj\\",
+        "outputPath": "C:\\Users\\ArmandoSassone\\Desktop\\Training\\git\\studio\\Calculator.Repository\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -106,8 +106,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\ArmandoSassone\\Desktop\\Training\\Back\\Calcolatrice\\Calculator\\Calculator.csproj": {
-                "projectPath": "C:\\Users\\ArmandoSassone\\Desktop\\Training\\Back\\Calcolatrice\\Calculator\\Calculator.csproj"
+              "C:\\Users\\ArmandoSassone\\Desktop\\Training\\git\\studio\\Calculator\\Calculator.csproj": {
+                "projectPath": "C:\\Users\\ArmandoSassone\\Desktop\\Training\\git\\studio\\Calculator\\Calculator.csproj"
               }
             }
           }
@@ -141,14 +141,14 @@
         }
       }
     },
-    "C:\\Users\\ArmandoSassone\\Desktop\\Training\\Back\\Calcolatrice\\Calculator\\Calculator.csproj": {
+    "C:\\Users\\ArmandoSassone\\Desktop\\Training\\git\\studio\\Calculator\\Calculator.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ArmandoSassone\\Desktop\\Training\\Back\\Calcolatrice\\Calculator\\Calculator.csproj",
+        "projectUniqueName": "C:\\Users\\ArmandoSassone\\Desktop\\Training\\git\\studio\\Calculator\\Calculator.csproj",
         "projectName": "Calculator",
-        "projectPath": "C:\\Users\\ArmandoSassone\\Desktop\\Training\\Back\\Calcolatrice\\Calculator\\Calculator.csproj",
+        "projectPath": "C:\\Users\\ArmandoSassone\\Desktop\\Training\\git\\studio\\Calculator\\Calculator.csproj",
         "packagesPath": "C:\\Users\\ArmandoSassone\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ArmandoSassone\\Desktop\\Training\\Back\\Calcolatrice\\Calculator\\obj\\",
+        "outputPath": "C:\\Users\\ArmandoSassone\\Desktop\\Training\\git\\studio\\Calculator\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

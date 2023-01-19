@@ -1,7 +1,7 @@
-﻿using Calculator.ConsoleApp.Models;
+﻿using Calculator.Models;
 using System.ComponentModel.DataAnnotations;
 
-namespace Calculator.ConsoleApp.Services
+namespace Calculator.Services
 {
     /// <summary>
     /// Operation contract

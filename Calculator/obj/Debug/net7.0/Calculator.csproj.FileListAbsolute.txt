@@ -10,3 +10,15 @@ C:\Users\ArmandoSassone\Desktop\Training\Back\Calcolatrice\Calculator\obj\Debug\
 C:\Users\ArmandoSassone\Desktop\Training\Back\Calcolatrice\Calculator\obj\Debug\net7.0\refint\Calculator.dll
 C:\Users\ArmandoSassone\Desktop\Training\Back\Calcolatrice\Calculator\obj\Debug\net7.0\Calculator.pdb
 C:\Users\ArmandoSassone\Desktop\Training\Back\Calcolatrice\Calculator\obj\Debug\net7.0\ref\Calculator.dll
+C:\Users\ArmandoSassone\Desktop\Training\git\studio\Calculator\bin\Debug\net7.0\Calculator.deps.json
+C:\Users\ArmandoSassone\Desktop\Training\git\studio\Calculator\bin\Debug\net7.0\Calculator.dll
+C:\Users\ArmandoSassone\Desktop\Training\git\studio\Calculator\bin\Debug\net7.0\Calculator.pdb
+C:\Users\ArmandoSassone\Desktop\Training\git\studio\Calculator\obj\Debug\net7.0\Calculator.csproj.AssemblyReference.cache
+C:\Users\ArmandoSassone\Desktop\Training\git\studio\Calculator\obj\Debug\net7.0\Calculator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ArmandoSassone\Desktop\Training\git\studio\Calculator\obj\Debug\net7.0\Calculator.AssemblyInfoInputs.cache
+C:\Users\ArmandoSassone\Desktop\Training\git\studio\Calculator\obj\Debug\net7.0\Calculator.AssemblyInfo.cs
+C:\Users\ArmandoSassone\Desktop\Training\git\studio\Calculator\obj\Debug\net7.0\Calculator.csproj.CoreCompileInputs.cache
+C:\Users\ArmandoSassone\Desktop\Training\git\studio\Calculator\obj\Debug\net7.0\Calculator.dll
+C:\Users\ArmandoSassone\Desktop\Training\git\studio\Calculator\obj\Debug\net7.0\refint\Calculator.dll
+C:\Users\ArmandoSassone\Desktop\Training\git\studio\Calculator\obj\Debug\net7.0\Calculator.pdb
+C:\Users\ArmandoSassone\Desktop\Training\git\studio\Calculator\obj\Debug\net7.0\ref\Calculator.dll

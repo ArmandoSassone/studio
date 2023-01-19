@@ -32,7 +32,7 @@ namespace Calculator.MOCK.Repository
         /// </summary>
         /// <param name="entity"></param>
         /// <returns>List of ValidationResult</returns>
-        public IEnumerable<ValidationResult> Save(Operation entity)
+        public void Save(Operation entity)
         {
             if (entity == null) throw new ArgumentNullException(nameof(entity));
 
@@ -42,7 +42,6 @@ namespace Calculator.MOCK.Repository
             //    mockList.Operations.Remove(firstOperation);
             //}
              mockList.Operations.Add(entity);
-             return new List<ValidationResult>();    
         }
 
         /// <summary>

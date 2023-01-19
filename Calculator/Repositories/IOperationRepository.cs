@@ -13,7 +13,7 @@ namespace Calculator.Repositories
         /// </summary>
         /// <param name="entity"></param>
         /// <returns>Saved operations list</returns>
-        IEnumerable<ValidationResult> Save(Operation entity);
+        void Save(Operation entity);
 
         /// <summary>
         /// Print the operation list

@@ -1,5 +1,4 @@
-﻿using Calculator.ConsoleApp.Models;
-using Calculator.Models;
+﻿using Calculator.Models;
 
 namespace Calculator.ConsoleApp.View
 {
@@ -18,7 +17,7 @@ namespace Calculator.ConsoleApp.View
             Console.WriteLine("3 - Multiplication\n");
             Console.WriteLine("4 - Division\n");
             Console.WriteLine("5 - Operation list\n");
-            Console.WriteLine("6 - Update an operation\n");
+            Console.WriteLine("6 - Get an operation by Id\n");
             Console.WriteLine("7 - Delete an operation\n");
             Console.WriteLine("0 - Exit");
             Console.WriteLine("______________________________________________");
@@ -74,21 +73,17 @@ namespace Calculator.ConsoleApp.View
             }
         }
 
-        /// <summary>
-        /// Create new operation
-        /// </summary>
-        /// <param name="id"></param>
-        /// <returns>Returns new operation</returns>
-        public Operation CreateOperation(int id)
+        public Guid GetGuidId()
         {
-            var newOperation = new Operation();
-            newOperation.OperationId = id;
-            Console.Write("Insert the first  operand: ");
-            newOperation.FirstOperand = GetNumber();
-            Console.Write("Insert the second operand: ");
-            newOperation.SecondOperand = GetNumber();
-            newOperation.OperationType = "Unknown";
-            return newOperation;
+            var guid = Console.ReadLine();
+            var id = Guid.Parse(guid);
+            return id;
+        }
+
+        public void PrintOperation(Operation item)
+        {
+            Console.WriteLine("ID: " + item.OperationId.ToString() + ", Type: " + item.OperationType + " | First operand: " + item.FirstOperand + ", Second operand: "
+                    + item.SecondOperand + " | Result: " + item.Result + "\n");
         }
 
         public void PrintMessage(string message)

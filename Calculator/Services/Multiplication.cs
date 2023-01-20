@@ -24,7 +24,6 @@ namespace Calculator.Services
                 throw new Exception(error.FirstOrDefault()?.ErrorMessage);
             }
             var result = operands.A * operands.B;
-            var operation = OperationHelper.CreateOperation(operands, this, result);
             return result;
         }
         

@@ -1,5 +1,6 @@
 ﻿using Calculator.Models;
 using System.ComponentModel.DataAnnotations;
+using VGC.Customers.Helpers;
 
 namespace Calculator.Repositories
 {
@@ -13,7 +14,7 @@ namespace Calculator.Repositories
         /// </summary>
         /// <param name="entity"></param>
         /// <returns>Saved operations list</returns>
-        void Save(Operation entity);
+        IEnumerable<ValidationResult> Save(Operation entity);
 
         /// <summary>
         /// Print the operation list
@@ -26,21 +27,11 @@ namespace Calculator.Repositories
         /// </summary>
         /// <param name="id"></param>
         /// <returns>Returns an operation</returns>
-        Operation GetOperationById(int id);
+        Operation GetOperationById(Guid id);
 
-        /// <summary>
-        /// Update an existing operation
-        /// </summary>
-        /// <param name="operation"></param>
-        /// <returns>Returns the updated operation</returns>
-        Operation Update(Operation entity);
+        IEnumerable<ValidationResult> Validate(Operation entity);
+        void Delete(Operation entity);
 
-        /// <summary>
-        /// Delete an existing operation
-        /// </summary>
-        /// <param name="entity"></param>
-        /// <returns>Returns the list without the deleted operation</returns>
-        Operation Delete(Operation entity);
 
     }
 }

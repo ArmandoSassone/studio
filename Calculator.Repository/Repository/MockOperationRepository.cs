@@ -2,6 +2,7 @@
 using Calculator.Repositories;
 using Calculator.Repository;
 using System.ComponentModel.DataAnnotations;
+using VGC.Customers.Helpers;
 
 namespace Calculator.MOCK.Repository
 {
@@ -21,7 +22,7 @@ namespace Calculator.MOCK.Repository
             return mockList.Operations;
         }
 
-        public Operation GetOperationById(int id)
+        public Operation GetOperationById(Guid id)
         {
             var entity = mockList.Operations.SingleOrDefault(e => e.OperationId == id);
             return entity;
@@ -32,57 +33,48 @@ namespace Calculator.MOCK.Repository
         /// </summary>
         /// <param name="entity"></param>
         /// <returns>List of ValidationResult</returns>
-        public void Save(Operation entity)
+        public IEnumerable<ValidationResult> Save(Operation entity)
         {
             if (entity == null) throw new ArgumentNullException(nameof(entity));
 
-            //if (mockList.Operations.Count() == 10)
-            //{
-            //    var firstOperation = mockList.Operations.First();
-            //    mockList.Operations.Remove(firstOperation);
-            //}
-             mockList.Operations.Add(entity);
+            if (entity.OperationId == null)
+            {
+                entity.OperationId = Guid.NewGuid();
+            }
+            var errors = Validate(entity);
+            if (errors.Any())
+            {
+                return errors;
+            }
+
+            if (mockList.Operations.Count() == 10)
+            {
+                var firstOperation = mockList.Operations.First();
+                mockList.Operations.Remove(firstOperation);
+            }
+            mockList.Operations.Add(entity);
+
+            return new List<ValidationResult>();
         }
 
-        /// <summary>
-        /// Update an existing operation
-        /// </summary>
-        /// <param name="entity"></param>
-        /// <returns>Returns the new added operation </returns>
-        public Operation Update(Operation entity)
-        {
-            //private bool esempio(Operation e)
-            //{
-            //    bool condition = e.OperationId == entity.OperationId;
-            //    return condition;
-            //}
-            var oldEntity = mockList.Operations.SingleOrDefault(e => e.OperationId == entity.OperationId);
-
-            if (oldEntity == null)
-            {
-                //Console.WriteLine("The " + oldEntity?.OperationId + " doesn't correspond to any existing IDs");
-                return null;
-            } 
-            else
-            {
-                mockList.Operations.Remove(oldEntity);
-                mockList.Operations.Add(entity);
-                return entity;
-            }
-        }        
-
-        public Operation Delete(Operation entity)
+        public void  Delete(Operation entity)
         {
             var entityToRemove = mockList.Operations.SingleOrDefault(e => e.OperationId == entity.OperationId);
             if (entityToRemove == null)
             {
-                return null;
+                return;
             }
-            else
+            mockList.Operations.Remove(entityToRemove);           
+        }
+
+        public IEnumerable<ValidationResult> Validate(Operation entity)
+        {
+            if (entity == null)
             {
-                mockList.Operations.Remove(entityToRemove);
-                return entityToRemove;
+                throw new ArgumentNullException("entity");
             }
+
+            return ModelValidatorHelper.Validate(entity);
         }
     }
 }

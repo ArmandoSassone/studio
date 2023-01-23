@@ -11,12 +11,6 @@ namespace Calculator.Services
     public class Sum : IOperation
     {
         public string OperationType => "Sum";
-        private IOperationRepository repository;
-        public Sum(IOperationRepository repository)
-        {
-            //devo passarmi il repo dal costruttore in modo che sia lo stesso per tutte le operation che creo
-            this.repository = repository; 
-        }
         public double ExecuteOperation(Operands operands)
         {           
             var error = Validate(operands);

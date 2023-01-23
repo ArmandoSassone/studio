@@ -16,14 +16,11 @@ namespace Calculator.Services
         public IEnumerable<ValidationResult> Save(Operands operands, IOperation operation, double result)
         {
             if (operation == null) throw new ArgumentNullException(nameof(operation));
-
-            var op = OperationHelper.CreateOperation(operands, operation, result);            
+            var op = OperationHelper.CreateOperation(operands, operation, result);     
+            
             return repository.Save(op);
         }
-        //public IEnumerable<ValidationResult> Update(Operation operation)
-        //{
-        //        throw new NotImplementedException();
-        //}
+
         public IList<Operation> Fetch()
         {
             return repository.Fetch();
@@ -31,7 +28,7 @@ namespace Calculator.Services
 
         public Operation GetOperationById(Guid id)
         {
-            if (id == null) throw new ArgumentNullException(nameof(id));
+            //if (id == null) throw new ArgumentNullException(nameof(id));
 
             return repository.GetOperationById(id);
         }

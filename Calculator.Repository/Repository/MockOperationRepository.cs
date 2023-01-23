@@ -22,9 +22,14 @@ namespace Calculator.MOCK.Repository
             return mockList.Operations;
         }
 
-        public Operation GetOperationById(Guid id)
+        public Operation GetOperationById(Guid? id)
         {
             var entity = mockList.Operations.SingleOrDefault(e => e.OperationId == id);
+            if (entity == null)
+            {
+                Console.WriteLine("\nThe Id you searched for doesn't exist\n");
+                return null;
+            }
             return entity;
         }
 

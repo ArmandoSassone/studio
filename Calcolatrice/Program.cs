@@ -4,7 +4,7 @@ using Calculator.MOCK.Repository;
 using Calculator.Repositories;
 
 var ui = new UserInterface();
-IOperation operation = null;
+IOperation? operation = null;
 IOperationRepository repository = new MockOperationRepository();
 IOperationService service = new OperationService(repository);
 
@@ -17,16 +17,16 @@ while (true)
         case 0:
             return;
         case 1:
-            operation = new Sum(repository);  
+            operation = new Sum();  
             break;
         case 2:
-            operation = new Subtraction(repository);
+            operation = new Subtraction();
             break;
         case 3:
-            operation = new Multiplication(repository);
+            operation = new Multiplication();
             break;
         case 4:
-            operation = new Division(repository);
+            operation = new Division();
             break;
         case 5:
             var operationList = service.Fetch();
@@ -45,6 +45,7 @@ while (true)
                 ui.PrintMessage("\nThe ID you searched for doesn't exist\n");
                 continue;
             }
+            ui.PrintMessage("\n");
             ui.PrintOperation(entity);
             continue;
         case 7:

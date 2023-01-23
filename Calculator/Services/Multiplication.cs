@@ -11,11 +11,6 @@ namespace Calculator.Services
     public class Multiplication : IOperation
     {
         public string OperationType => "Multiplication";
-        private IOperationRepository repository;
-        public Multiplication(IOperationRepository repository)
-        {
-            this.repository = repository;
-        }
         public double ExecuteOperation(Operands operands)
         {
             var error = Validate(operands);

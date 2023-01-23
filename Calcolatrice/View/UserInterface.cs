@@ -73,17 +73,28 @@ namespace Calculator.ConsoleApp.View
             }
         }
 
+        /// <summary>
+        /// Get a Guid
+        /// </summary>
+        /// <returns>Returns the Guid you're searching for</returns>
         public Guid GetGuidId()
         {
             var guid = Console.ReadLine();
-            var id = Guid.Parse(guid);
+            var isValid = Guid.TryParse(guid, out var id);
+
+            while (!isValid)
+            {
+                Console.WriteLine("\nThe ID you're searching for doesn't exist or it's wrong, retry:");
+                guid = Console.ReadLine();
+                isValid = Guid.TryParse(guid, out id);
+            }
             return id;
         }
 
         public void PrintOperation(Operation item)
         {
-            Console.WriteLine("ID: " + item.OperationId.ToString() + ", Type: " + item.OperationType + " | First operand: " + item.FirstOperand + ", Second operand: "
-                    + item.SecondOperand + " | Result: " + item.Result + "\n");
+            Console.WriteLine("ID: " + item.OperationId.ToString() + ", Type: " + item.OperationType + " | First operand: " 
+                             + item.FirstOperand + ", Second operand: " + item.SecondOperand + " | Result: " + item.Result + "\n");
         }
 
         public void PrintMessage(string message)

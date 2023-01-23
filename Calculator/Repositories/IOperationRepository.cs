@@ -27,7 +27,7 @@ namespace Calculator.Repositories
         /// </summary>
         /// <param name="id"></param>
         /// <returns>Returns an operation</returns>
-        Operation GetOperationById(Guid id);
+        Operation GetOperationById(Guid? id);
 
         IEnumerable<ValidationResult> Validate(Operation entity);
         void Delete(Operation entity);

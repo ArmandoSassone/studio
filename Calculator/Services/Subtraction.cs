@@ -8,13 +8,6 @@ namespace Calculator.Services
     public class Subtraction : IOperation
     {
         public string OperationType => "Subtraction";
-
-        private IOperationRepository repository;
-        public Subtraction(IOperationRepository repository)
-        {
-            //devo passarmi il repo dal costruttore in modo che sia lo stesso per tutte le operation che creo
-            this.repository = repository; 
-        }
         public double ExecuteOperation(Operands operands)
         {
             var error = Validate(operands);

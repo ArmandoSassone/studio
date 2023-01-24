@@ -4,7 +4,7 @@ using Calculator.Services;
 namespace Calculator.Helpers
 {
     /// <summary>
-    /// Operation helper 
+    /// Operations helper 
     /// </summary>
     public class OperationHelper 
     {

@@ -1,5 +1,4 @@
-﻿using Calculator.Models;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace VGC.Customers.Helpers
 {

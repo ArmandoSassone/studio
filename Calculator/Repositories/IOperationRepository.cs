@@ -1,6 +1,5 @@
 ﻿using Calculator.Models;
 using System.ComponentModel.DataAnnotations;
-using VGC.Customers.Helpers;
 
 namespace Calculator.Repositories
 {
@@ -29,9 +28,17 @@ namespace Calculator.Repositories
         /// <returns>Returns an operation</returns>
         Operation GetOperationById(Guid? id);
 
+        /// <summary>
+        /// Validate for operations
+        /// </summary>
+        /// <param name="entity"></param>
+        /// <returns>Returns a list of validation results</returns>
         IEnumerable<ValidationResult> Validate(Operation entity);
+
+        /// <summary>
+        /// Delete operations
+        /// </summary>
+        /// <param name="entity"></param>
         void Delete(Operation entity);
-
-
     }
 }

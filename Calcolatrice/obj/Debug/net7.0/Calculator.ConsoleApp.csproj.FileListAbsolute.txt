@@ -38,3 +38,4 @@ C:\Users\ArmandoSassone\Desktop\Training\git\studio\Calcolatrice\obj\Debug\net7.
 C:\Users\ArmandoSassone\Desktop\Training\git\studio\Calcolatrice\obj\Debug\net7.0\Calculator.ConsoleApp.pdb
 C:\Users\ArmandoSassone\Desktop\Training\git\studio\Calcolatrice\obj\Debug\net7.0\Calculator.ConsoleApp.genruntimeconfig.cache
 C:\Users\ArmandoSassone\Desktop\Training\git\studio\Calcolatrice\obj\Debug\net7.0\ref\Calculator.ConsoleApp.dll
+C:\Users\ArmandoSassone\Desktop\Training\git\studio\Calcolatrice\bin\Debug\net7.0\ConsoleTables.dll

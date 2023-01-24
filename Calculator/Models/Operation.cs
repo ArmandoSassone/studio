@@ -10,15 +10,22 @@ namespace Calculator.Models
         /// <summary>
         /// Operation Id
         /// </summary>
+        //Devo dichiararlo nullable (con ?) perché altrimenti di default verrebbe impostato 0000-0000-0000-0000
+        public Guid? Id { get; set; }
+
+        /// <summary>
+        /// Date
+        /// </summary>
+
         [Required]
-        public Guid? OperationId { get; set; }
+        public DateTime Date { get; set; }
 
         /// <summary>
         /// Type of operation
         /// </summary>
         [Required]
         [StringLength(100)]
-        public string? OperationType { get; set; }
+        public string? Type { get; set; } //verificare che questa stringa sia valorizzata correttamente (sum, subtraction..)
 
         /// <summary>
         /// First operand

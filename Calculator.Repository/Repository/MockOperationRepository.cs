@@ -6,70 +6,56 @@ using VGC.Customers.Helpers;
 
 namespace Calculator.MOCK.Repository
 {
-    /// <summary>
-    /// 
-    /// </summary>
     public class MockOperationRepository : IOperationRepository
     {
         private MockList mockList = new MockList();
 
-        /// <summary>
-        /// Fetch operations 
-        /// </summary>
-        /// <returns>Operations list</returns>
         public IList<Operation> Fetch()
         {
-            return mockList.Operations;
+            return mockList.Operations.OrderByDescending(x => x.Date).ToList()/*.GetRange(0, 10)*/;
         }
 
-        public Operation GetOperationById(Guid? id)
+        public Operation GetById(Guid? id)
         {
-            var entity = mockList.Operations.SingleOrDefault(e => e.OperationId == id);
+            var entity = mockList.Operations.SingleOrDefault(e => e.Id == id);
             if (entity == null)
             {
                 Console.WriteLine("\nThe Id you searched for doesn't exist\n");
                 return null;
             }
+
             return entity;
         }
 
-        /// <summary>
-        /// Save new operation 
-        /// </summary>
-        /// <param name="entity"></param>
-        /// <returns>List of ValidationResult</returns>
         public IEnumerable<ValidationResult> Save(Operation entity)
         {
             if (entity == null) throw new ArgumentNullException(nameof(entity));
 
-            if (entity.OperationId == null)
+            if (entity.Id == null)
             {
-                entity.OperationId = Guid.NewGuid();
+                entity.Id = Guid.NewGuid();
             }
+
             var errors = Validate(entity);
             if (errors.Any())
             {
                 return errors;
             }
 
-            if (mockList.Operations.Count() == 10)
-            {
-                var firstOperation = mockList.Operations.First();
-                mockList.Operations.Remove(firstOperation);
-            }
             mockList.Operations.Add(entity);
 
             return new List<ValidationResult>();
         }
 
-        public void  Delete(Operation entity)
+        public void Delete(Operation entity)
         {
-            var entityToRemove = mockList.Operations.SingleOrDefault(e => e.OperationId == entity.OperationId);
+            var entityToRemove = mockList.Operations.SingleOrDefault(e => e.Id == entity.Id);
             if (entityToRemove == null)
             {
                 return;
             }
-            mockList.Operations.Remove(entityToRemove);           
+
+            mockList.Operations.Remove(entityToRemove);
         }
 
         public IEnumerable<ValidationResult> Validate(Operation entity)

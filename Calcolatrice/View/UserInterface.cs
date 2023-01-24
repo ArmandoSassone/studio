@@ -1,4 +1,5 @@
 ﻿using Calculator.Models;
+using ConsoleTables;
 
 namespace Calculator.ConsoleApp.View
 {
@@ -91,12 +92,30 @@ namespace Calculator.ConsoleApp.View
             return id;
         }
 
+        /// <summary>
+        /// Print operation details
+        /// </summary>
+        /// <param name="item"></param>
         public void PrintOperation(Operation item)
         {
-            Console.WriteLine("ID: " + item.OperationId.ToString() + ", Type: " + item.OperationType + " | First operand: " 
-                             + item.FirstOperand + ", Second operand: " + item.SecondOperand + " | Result: " + item.Result + "\n");
+            Console.WriteLine("ID: " + item.Id.ToString() + ", Type: " + item.Type + " | First operand: "
+                             + item.FirstOperand + ", Second operand: " + item.SecondOperand + " | Result: " + item.Result + " | Date: " + item.Date + "\n");            
         }
 
+        /// <summary>
+        /// Print table with operations details
+        /// </summary>
+        /// <param name="item"></param>
+        /// <param name="table"></param>
+        public void PrintTable(Operation item, ConsoleTable table)
+        {
+            table.AddRow(item.Id, item.Type, item.FirstOperand, item.SecondOperand, item.Result, item.Date);
+        }
+
+        /// <summary>
+        /// Console writeline
+        /// </summary>
+        /// <param name="message"></param>
         public void PrintMessage(string message)
         {
             Console.WriteLine(message);

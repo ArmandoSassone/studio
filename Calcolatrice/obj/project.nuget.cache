@@ -1,8 +1,19 @@
 {
   "version": 2,
-  "dgSpecHash": "VncZcosHZa8Kxop2MXR1qNF+MUIcisO7yOF7AFZNcZs8YutbZYvPhtVHRZfS+pCkbqhFX02legT3gI8s3BbjIQ==",
+  "dgSpecHash": "2bl4UakFosF1xaX++qwXRzvLF/SfRCEdshllVUgrkFeIwK7s16oTgmyL8fp1in6PYxPwaD5LAkDYfvvbF9zcuQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\ArmandoSassone\\Desktop\\Training\\git\\studio\\Calcolatrice\\Calculator.ConsoleApp.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\ArmandoSassone\\.nuget\\packages\\consoletables\\2.4.2\\consoletables.2.4.2.nupkg.sha512",
+    "C:\\Users\\ArmandoSassone\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\ArmandoSassone\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
+    "C:\\Users\\ArmandoSassone\\.nuget\\packages\\system.io\\4.3.0\\system.io.4.3.0.nupkg.sha512",
+    "C:\\Users\\ArmandoSassone\\.nuget\\packages\\system.reflection\\4.3.0\\system.reflection.4.3.0.nupkg.sha512",
+    "C:\\Users\\ArmandoSassone\\.nuget\\packages\\system.reflection.primitives\\4.3.0\\system.reflection.primitives.4.3.0.nupkg.sha512",
+    "C:\\Users\\ArmandoSassone\\.nuget\\packages\\system.reflection.typeextensions\\4.3.0\\system.reflection.typeextensions.4.3.0.nupkg.sha512",
+    "C:\\Users\\ArmandoSassone\\.nuget\\packages\\system.runtime\\4.3.0\\system.runtime.4.3.0.nupkg.sha512",
+    "C:\\Users\\ArmandoSassone\\.nuget\\packages\\system.text.encoding\\4.3.0\\system.text.encoding.4.3.0.nupkg.sha512",
+    "C:\\Users\\ArmandoSassone\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512"
+  ],
   "logs": []
 }

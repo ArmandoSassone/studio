@@ -4,10 +4,10 @@ using System.ComponentModel.DataAnnotations;
 namespace Calculator.Repositories
 {
     /// <summary>
-    /// 
+    /// Operations repository
     /// </summary>
     public interface IOperationRepository
-    {
+    {//I servizi devono essere async e task
         /// <summary>
         /// Save an operation in the operation list
         /// </summary>
@@ -26,7 +26,7 @@ namespace Calculator.Repositories
         /// </summary>
         /// <param name="id"></param>
         /// <returns>Returns an operation</returns>
-        Operation GetOperationById(Guid? id);
+        Operation GetById(Guid? id);
 
         /// <summary>
         /// Validate for operations

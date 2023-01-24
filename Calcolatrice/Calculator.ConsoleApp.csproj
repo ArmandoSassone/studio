@@ -8,6 +8,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="ConsoleTables" Version="2.4.2" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Calculator.Repository\Calculator.MOCK.csproj" />
     <ProjectReference Include="..\Calculator\Calculator.csproj" />
   </ItemGroup>

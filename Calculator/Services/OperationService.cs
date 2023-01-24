@@ -12,13 +12,18 @@ namespace Calculator.Services
         {
             this.repository = repository;
         }
-    
-        public IEnumerable<ValidationResult> Save(Operands operands, IOperation operation, double result)
+
+        public IEnumerable<ValidationResult> Save(Operation operation)//passare solo entity
         {
             if (operation == null) throw new ArgumentNullException(nameof(operation));
-            var op = OperationHelper.CreateOperation(operands, operation, result);     
-            
-            return repository.Save(op);
+
+            var errors = repository.Validate(operation);
+            if (errors.Any())
+            {
+                return errors;
+            }
+
+            return repository.Save(operation);
         }
 
         public IList<Operation> Fetch()
@@ -26,11 +31,11 @@ namespace Calculator.Services
             return repository.Fetch();
         }
 
-        public Operation GetOperationById(Guid id)
+        public Operation GetById(Guid? id)
         {
-            //if (id == null) throw new ArgumentNullException(nameof(id));
+            if (id == null) throw new ArgumentNullException(nameof(id));
 
-            return repository.GetOperationById(id);
+            return repository.GetById(id);
         }
 
         public void Delete(Operation entity)

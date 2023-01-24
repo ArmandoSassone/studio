@@ -1,13 +1,8 @@
-﻿using Calculator.Helpers;
-using Calculator.Models;
-using Calculator.Repositories;
+﻿using Calculator.Models;
 using System.ComponentModel.DataAnnotations;
 
 namespace Calculator.Services
 {
-    /// <summary>
-    /// Sum
-    /// </summary>
     public class Sum : IOperation
     {
         public string OperationType => "Sum";

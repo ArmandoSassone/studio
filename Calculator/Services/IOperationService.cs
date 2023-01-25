@@ -1,5 +1,4 @@
 ﻿using Calculator.Models;
-using Calculator.Services;
 using System.ComponentModel.DataAnnotations;
 
 public interface IOperationService
@@ -11,7 +10,7 @@ public interface IOperationService
     /// <param name="operation"></param>
     /// <param name="result"></param>
     /// <return>Returns a list of validation results</returns>
-    public IEnumerable<ValidationResult> Save(Operation operation);
+    public Task<IEnumerable<ValidationResult>> Save(Operation operation);
 
     /// <summary>
     /// Fetch list
@@ -30,5 +29,5 @@ public interface IOperationService
     /// Delete operation
     /// </summary>
     /// <param name="operation"></param>
-    public void Delete(Operation operation);
+    public Task Delete(Operation operation);
 }

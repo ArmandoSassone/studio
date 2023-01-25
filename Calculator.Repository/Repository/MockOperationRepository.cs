@@ -27,7 +27,7 @@ namespace Calculator.MOCK.Repository
             return entity;
         }
 
-        public IEnumerable<ValidationResult> Save(Operation entity)
+        public Task<IEnumerable<ValidationResult>> Save(Operation entity)
         {
             if (entity == null) throw new ArgumentNullException(nameof(entity));
 
@@ -37,25 +37,29 @@ namespace Calculator.MOCK.Repository
             }
 
             var errors = Validate(entity);
+
             if (errors.Any())
             {
-                return errors;
+                return Task.FromResult<IEnumerable<ValidationResult>>(errors);
             }
 
             mockList.Operations.Add(entity);
 
-            return new List<ValidationResult>();
+            return Task.FromResult<IEnumerable<ValidationResult>>(new List<ValidationResult>());
         }
 
-        public void Delete(Operation entity)
+        public Task Delete(Operation entity)
         {
             var entityToRemove = mockList.Operations.SingleOrDefault(e => e.Id == entity.Id);
+
             if (entityToRemove == null)
             {
-                return;
+                return null;
             }
 
             mockList.Operations.Remove(entityToRemove);
+            
+            return Task.CompletedTask;
         }
 
         public IEnumerable<ValidationResult> Validate(Operation entity)

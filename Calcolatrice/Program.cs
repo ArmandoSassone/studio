@@ -4,6 +4,10 @@ using Calculator.MOCK.Repository;
 using Calculator.Repositories;
 using Calculator.Helpers;
 using ConsoleTables;
+using static Calculator.ConsoleApp.View.UserInterface;
+
+Console.Title = "Calculator";
+Console.ForegroundColor = ConsoleColor.Cyan;
 
 var ui = new UserInterface();
 IOperation? operation = null;
@@ -31,19 +35,28 @@ while (true)
             operation = new Division();
             break;
 
-        case 5:                                     
+        case 5:
             var operationList = service.Fetch();
+            Console.Clear();
+            using (var spinner = new Spinner(10, 10))
+            {
+                spinner.Start();
+                Thread.Sleep(2500);
+            }
+            Console.Clear();
             var table = new ConsoleTable("ID", "Type", "First operand", "Second operand", "Result", "Date");
-            foreach (var item in operationList)   
+            foreach (var item in operationList)
             {
                 ui.PrintTable(item, table);
             }
             table.Write();
+            Task.Delay(5250).Wait();
             continue;
 
         case 6:
             ui.PrintMessage("Insert the operation ID you want to get: ");
             var id = ui.GetGuidId();
+            if (id == null) { continue; }
             var e = service.GetById(id);
             if (e == null)
             {
@@ -57,6 +70,7 @@ while (true)
         case 7:
             ui.PrintMessage("Insert the operation ID you want to delete: ");
             var entityToDeleteId = ui.GetGuidId();
+            if (entityToDeleteId == null) { continue; }
             var entityToDelete = service.GetById(entityToDeleteId);
             if (entityToDelete == null)
             {
@@ -74,11 +88,11 @@ while (true)
     var entity = OperationHelper.CreateOperation(operands, operation, result);
 
     var errors = service.Save(entity);
-    if (errors.Any())
-    {
-        ui.PrintMessage("\nSaving operation failed\n");
-    }
-    ui.PrintMessage("\nThe result of the operation you chose is " + result + ".\n");
+    //if (errors.Any())
+    //{
+    //    ui.PrintMessage("\nSaving operation failed\n");
+    //}
+    ui.PrintMessage("\nThe result of the operation you chose is " + result + ".");
 }
 
 /*Creare progetto di business, progetto di repository. per ciascun input e output devo salvare tutto nel repo

@@ -7,13 +7,13 @@ namespace Calculator.Repositories
     /// Operations repository
     /// </summary>
     public interface IOperationRepository
-    {//I servizi devono essere async e task
+    {                                                                   //I servizi devono essere async e task
         /// <summary>
         /// Save an operation in the operation list
         /// </summary>
         /// <param name="entity"></param>
         /// <returns>Saved operations list</returns>
-        IEnumerable<ValidationResult> Save(Operation entity);
+        Task<IEnumerable<ValidationResult>> Save(Operation entity);
 
         /// <summary>
         /// Print the operation list
@@ -39,6 +39,6 @@ namespace Calculator.Repositories
         /// Delete operations
         /// </summary>
         /// <param name="entity"></param>
-        void Delete(Operation entity);
+        Task Delete(Operation entity);
     }
 }

@@ -1,5 +1,4 @@
-﻿using Calculator.Helpers;
-using Calculator.Models;
+﻿using Calculator.Models;
 using Calculator.Repositories;
 using System.ComponentModel.DataAnnotations;
 
@@ -13,17 +12,29 @@ namespace Calculator.Services
             this.repository = repository;
         }
 
-        public IEnumerable<ValidationResult> Save(Operation operation)//passare solo entity
+        public async Task<IEnumerable<ValidationResult>> Save(Operation operation)//passare solo entity
         {
             if (operation == null) throw new ArgumentNullException(nameof(operation));
 
             var errors = repository.Validate(operation);
+
             if (errors.Any())
             {
                 return errors;
             }
 
-            return repository.Save(operation);
+            //if (operation.Id == null)
+            //{
+            //    var existing = await GetById();
+            //    if (existing != null)
+            //    {
+            //        var mex = string.Format(operation.Id + " is already used");
+            //        errors = errors.Append(new ValidationResult(mex, new List<string> { nameof(operation.Id) }));
+            //        return errors;
+            //    }
+            //}
+
+            return await repository.Save(operation);
         }
 
         public IList<Operation> Fetch()
@@ -38,11 +49,11 @@ namespace Calculator.Services
             return repository.GetById(id);
         }
 
-        public void Delete(Operation entity)
+        public Task Delete(Operation entity)
         {
             if (entity == null) throw new ArgumentNullException(nameof(entity));
 
-            repository.Delete(entity);
+            return repository.Delete(entity); // Perché qui non c'è bisogno di specificare task?
         }
     }
 }

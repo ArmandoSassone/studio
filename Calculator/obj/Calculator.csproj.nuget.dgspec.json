@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ArmandoSassone\\Desktop\\Training\\git\\studio\\Calculator\\Calculator.csproj": {}
+    "C:\\Users\\arman\\OneDrive\\Desktop\\Cartelle\\Coding\\git\\Calculator\\Calculator.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ArmandoSassone\\Desktop\\Training\\git\\studio\\Calculator\\Calculator.csproj": {
+    "C:\\Users\\arman\\OneDrive\\Desktop\\Cartelle\\Coding\\git\\Calculator\\Calculator.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ArmandoSassone\\Desktop\\Training\\git\\studio\\Calculator\\Calculator.csproj",
+        "projectUniqueName": "C:\\Users\\arman\\OneDrive\\Desktop\\Cartelle\\Coding\\git\\Calculator\\Calculator.csproj",
         "projectName": "Calculator",
-        "projectPath": "C:\\Users\\ArmandoSassone\\Desktop\\Training\\git\\studio\\Calculator\\Calculator.csproj",
-        "packagesPath": "C:\\Users\\ArmandoSassone\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ArmandoSassone\\Desktop\\Training\\git\\studio\\Calculator\\obj\\",
+        "projectPath": "C:\\Users\\arman\\OneDrive\\Desktop\\Cartelle\\Coding\\git\\Calculator\\Calculator.csproj",
+        "packagesPath": "C:\\Users\\arman\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\arman\\OneDrive\\Desktop\\Cartelle\\Coding\\git\\Calculator\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\ArmandoSassone\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\arman\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,11 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://pkgs.dev.azure.com/falckgroup/_packaging/falckgroup/nuget/v3/index.json": {},
-          "https://pkgs.dev.azure.com/falckgroup/ext-services/_packaging/ext-services/nuget/v3/index.json": {},
-          "https://pkgs.dev.azure.com/falckgroup/farmhub/_packaging/release/nuget/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
@@ -58,12 +50,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

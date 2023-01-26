@@ -141,6 +141,8 @@ namespace Calculator.ConsoleApp.View
             Console.WriteLine(message);
         }
 
+        //ga<s
+
         /// <summary>
         /// Class for spinner to simulate loading status
         /// </summary>
